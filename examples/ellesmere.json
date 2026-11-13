@@ -1,0 +1,98 @@
+{
+  "query": "polar desert analog field testing",
+  "search": {"allowed_domains": ["nasa.gov", "esa.int", "usgs.gov"]},
+  "upstream_version": "user-supplied-record; similarity-version-not-provided",
+  "target": {
+    "id": "illustrative-lunar-polar-target-not-a-measured-site",
+    "body": "moon",
+    "conditions": ["polar"],
+    "features": {}
+  },
+  "missions": [
+    {
+      "id": "illustrative-navigation",
+      "objectives": ["navigation"],
+      "required_resolution_m": 0.5,
+      "equipment": {},
+      "constraints": []
+    },
+    {
+      "id": "illustrative-ice-extraction",
+      "objectives": ["ice_extraction", "thermal"],
+      "equipment": {},
+      "constraints": []
+    }
+  ],
+  "candidates": [
+    {
+      "original_similarity": null,
+      "units": {},
+      "metadata": {
+        "terrain.elevation": {"resolution_m": 90},
+        "terrain.relief": {"resolution_m": 90},
+        "terrain.slopeMean": {"resolution_m": 90},
+        "terrain.slopeP95": {"resolution_m": 90},
+        "terrain.roughness": {"resolution_m": 90}
+      },
+      "site": {
+        "id": "ellesmere",
+        "name": "Ellesmere Island",
+        "country": "Canada",
+        "lat": 80.0,
+        "lon": -80.0,
+        "type": "Polar desert",
+        "tags": ["ice", "regolith"],
+        "summary": "Polar desert candidate in Canada...",
+        "climate": {
+          "tempMean": -18.1, "tempAmp": 30.6, "precipYear": 266.7,
+          "humidity": 91.0, "wind": 2.14, "solar": 2.52, "aerosol": 0.047,
+          "soilWetnessTop": 0.76, "pressure": 92.1
+        },
+        "terrain": {
+          "elevation": 1303.4, "relief": 142.9, "slopeMean": 7.78,
+          "slopeP95": 21.25, "roughness": 2.24
+        },
+        "geology": {
+          "lith": "sedimentary rocks", "age": "Cenozoic", "unit": "Cenozoic sedimentary rocks",
+          "tags": [], "source": "Macrostrat CC-BY 4.0"
+        },
+        "airport": {"name": "Qaanaaq Airport", "iata": "NAQ", "km": 360.9},
+        "access": 0.357,
+        "noveltyKm": 209.4,
+        "nearestControl": {"id": "axelheiberg", "name": "Axel Heiberg Island", "km": 209.4},
+        "missing": [
+          "catalog / literature novelty review", "land surface temperature (MODIS/VIIRS LST)",
+          "mineralogy species (requires EMIT/ASTER refinement)", "vegetation / land cover",
+          "water / ice state", "subsurface structure", "geotechnical properties", "field validation"
+        ],
+        "evidence": {
+          "climate": {
+            "source": "NASA POWER / MERRA-2 climatology 2001-2020",
+            "resolution": "0.5° x 0.625° reanalysis grid, point sample",
+            "class": "reanalysis",
+            "uncertainty": "Monthly normals; suppresses daily extremes; not a forecast."
+          },
+          "terrain": {
+            "source": "Copernicus DEM GLO-90", "resolution": "90 m DSM", "class": "derived",
+            "uncertainty": "DSM includes vegetation/buildings; slope at 90 m baseline."
+          },
+          "geology": {
+            "source": "Macrostrat CC-BY 4.0", "resolution": "mapped vector unit", "class": "mapped",
+            "uncertainty": "Regional unit, not an outcrop or assay."
+          },
+          "access": {
+            "source": "OurAirports", "resolution": "point distance", "class": "derived",
+            "uncertainty": "Straight-line airport distance; no road or permit model."
+          }
+        },
+        "sar": {
+          "platform": "RADARSAT-1", "acquired": "2005-03-24", "beamMode": "Fine F2",
+          "polarization": "HH", "incidenceAngle": null, "thumbnail": "/sar/ellesmere.jpg",
+          "texture": {"mean": 125.11, "std": 48.47, "entropy": 4.599}, "frameProduct": "",
+          "support": "RADARSAT-1 segment browse texture only; ... not a local AOI measurement.",
+          "class": "historical SAR context", "uncertainty": "8-bit relative amplitude; no calibration to sigma0."
+        }
+      }
+    }
+  ]
+}

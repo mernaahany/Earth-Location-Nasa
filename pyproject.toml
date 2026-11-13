@@ -1,0 +1,5 @@
+[project]
+name = "earth-analog-validation"
+version = "0.2.0"
+description = "Evidence-grounded validation after Earth-Moon-Mars similarity scoring"
+requires-python = ">=3.10"

@@ -1,0 +1,169 @@
+{
+  "version": "2-serper",
+  "purpose": "Search routing guidance only; not evidence or a held-out evaluation set.",
+  "cases": [
+    {
+      "id": "polar-navigation",
+      "body": "moon",
+      "objectives": [
+        "navigation"
+      ],
+      "given": "Strong terrain match with low-angle polar illumination",
+      "route": "search_then_review",
+      "missing": [
+        "target DEM",
+        "Sun ephemeris",
+        "camera response"
+      ],
+      "action": "Recommend lighting and navigation simulation; preserve similarity.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "mars-solar",
+      "body": "mars",
+      "objectives": [
+        "solar_power"
+      ],
+      "given": "Desert match with dust exposure",
+      "route": "search_then_review",
+      "missing": [
+        "panel response",
+        "dust deposition",
+        "load profile",
+        "battery usable capacity"
+      ],
+      "action": "Recommend measured energy time series; never reuse InSight outputs as another mission budget.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "mars-traction",
+      "body": "mars",
+      "objectives": [
+        "navigation"
+      ],
+      "given": "Sand, sharp rocks and slope",
+      "route": "search_then_review",
+      "missing": [
+        "wheel geometry",
+        "soil properties",
+        "mission-specific limits"
+      ],
+      "action": "Compare referenced limits if applicable; recommend wheel-soil tests, not slip probabilities.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "lunar-resource",
+      "body": "moon",
+      "objectives": [
+        "ice_extraction",
+        "navigation"
+      ],
+      "given": "Cold terrestrial site and a shadowed lunar target",
+      "route": "search_then_review",
+      "missing": [
+        "local ice assay",
+        "depth",
+        "route",
+        "thermal profile"
+      ],
+      "action": "Separate ice detection from accessible recovery; recommend cryogenic sampling and excavation tests.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "lunar-dust",
+      "body": "moon",
+      "objectives": [
+        "dust_mitigation"
+      ],
+      "given": "Similar grain size on Earth",
+      "route": "search_then_review",
+      "missing": [
+        "surface properties",
+        "charging conditions"
+      ],
+      "action": "Recommend characterized simulant and controlled vacuum tests; no numerical penalty.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "depression",
+      "body": "mars",
+      "objectives": [
+        "navigation",
+        "geology"
+      ],
+      "given": "Candidate DEM depression",
+      "route": "search_then_review",
+      "missing": [
+        "mission-scale DEM",
+        "morphology analysis",
+        "temporal imagery"
+      ],
+      "action": "Require spatial analysis; do not call it a confirmed or new crater. Spatial detector is not implemented.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "insufficient",
+      "body": "moon",
+      "objectives": [
+        "navigation"
+      ],
+      "given": "High score without equipment configuration",
+      "route": "search_then_review",
+      "missing": [
+        "referenced equipment limits",
+        "validated model inputs"
+      ],
+      "action": "Return insufficient_evidence and null suitability; preserve upstream score.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    },
+    {
+      "id": "multi-mission",
+      "body": "mars",
+      "objectives": [
+        "navigation",
+        "habitat",
+        "astrobiology"
+      ],
+      "given": "Shared Earth site",
+      "route": "search_then_review",
+      "missing": [
+        "contamination controls",
+        "habitat requirements"
+      ],
+      "action": "Evaluate separately; require reviewed cross-mission rules before claiming compatibility or recommending test zones.",
+      "search_scopes": [
+        "earth_site",
+        "planetary_target"
+      ],
+      "verification": "Search snippets remain pending_review; inspect full sources."
+    }
+  ]
+}
